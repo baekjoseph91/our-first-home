@@ -16,6 +16,9 @@ const fadeUp = {
 
 const cinematicEase = [0.16, 1, 0.3, 1] as const;
 
+const VIMEO_FILM_EMBED =
+  "https://player.vimeo.com/video/1194371177?title=0&byline=0&portrait=0&badge=0";
+
 function StoryInterlude({
   eyebrow,
   children
@@ -267,20 +270,21 @@ function FilmSection() {
         >
           <div className="pointer-events-none absolute -inset-8 rounded-[3rem] bg-[radial-gradient(circle_at_50%_50%,rgba(255,217,161,.18),transparent_62%)] blur-2xl" />
           <div className="relative overflow-hidden rounded-[1.55rem] border border-white/12 bg-black">
-            <video
-              className="aspect-video w-full bg-black object-contain"
-              controls
-              playsInline
-              preload="auto"
-              poster="/posters/main-poster.png"
-            >
-              <source src="/videos/our-first-home.mp4" type="video/mp4" />
-            </video>
+            <div className="relative aspect-video w-full bg-black">
+              <iframe
+                src={VIMEO_FILM_EMBED}
+                title="Our First Home — Anniversary Film"
+                className="absolute inset-0 h-full w-full"
+                allow="autoplay; fullscreen; picture-in-picture; encrypted-media"
+                allowFullScreen
+                loading="lazy"
+              />
+            </div>
           </div>
         </motion.div>
         <p className="mx-auto mt-7 max-w-2xl text-center text-sm leading-7 text-white/48">
-          Watch the anniversary film in a cinematic player with native controls
-          and fullscreen playback support.
+          Stream the anniversary film in a cinematic Vimeo player with fullscreen
+          playback.
         </p>
       </motion.div>
     </section>

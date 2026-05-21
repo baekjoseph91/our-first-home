@@ -4,3 +4,8 @@ out
 dist
 .env*.local
 *.log
+
+# Large local films — main film is hosted on Vimeo
+public/videos/*.mp4
+public/videos/*.mov
+public/videos/*.webm

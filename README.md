@@ -6,9 +6,9 @@ A cinematic first anniversary film website built with Next.js App Router, Tailwi
 
 Place the final videos in `public/`:
 
-- `public/cinematic-background.mp4` for the muted autoplay hero background
-- `public/videos/our-first-home.mp4` for the main anniversary film
-- `public/posters/main-poster.png` for the main film poster
+- `public/cinematic-background.mp4` for the muted autoplay hero background (optional)
+- Main anniversary film is embedded from Vimeo (see `VIMEO_FILM_EMBED` in `app/home-client.tsx`)
+- `public/posters/main-poster.png` for optional poster assets
 - Included generated hero poster: `public/poster.png`
 
 ## Run
